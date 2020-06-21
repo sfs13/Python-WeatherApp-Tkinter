@@ -19,15 +19,15 @@ def showWeather():
             .get_forecast().get_weathers()
 
         w.labelWeather['text'] = 'Температура: {0} °C' \
-                                 '\nПогода: {1}' \
-                                 '\nВетер: {2} м/с' \
-                                 '\nЗавтра: {3}' \
-                                 '\nПослезавтра: {4}'.format(
+                                 '\nВетер: {1} м/с' \
+                                 '\nПогода:\n{2}' \
+                                 '\nЗавтра:\n{3}' \
+                                 '\nПослезавтра:\n{4}'.format(
             weather.get_temperature('celsius')['temp'],
-            weather.get_detailed_status(),
             weather.get_wind()['speed'],
-            forecast[0].get_detailed_status(),
-            forecast[1].get_detailed_status()
+            weather.get_detailed_status().capitalize(),
+            forecast[0].get_detailed_status().capitalize(),
+            forecast[1].get_detailed_status().capitalize()
         )
     except OSError:
         w.labelWeather['text'] = 'Произошла сетевая\nошибка!'

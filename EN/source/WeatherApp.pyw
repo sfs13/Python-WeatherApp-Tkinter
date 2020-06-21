@@ -19,15 +19,15 @@ def showWeather():
             .get_forecast().get_weathers()
 
         w.labelWeather['text'] = 'Temperature: {0} °C' \
-                                 '\nWeather: {1}' \
-                                 '\nWind: {2} m/s' \
-                                 '\nTomorrow: {3}' \
+                                 '\nWind: {1} m/s' \
+                                 '\nWeather:\n{2}' \
+                                 '\nTomorrow:\n{3}' \
                                  '\nDay after tomorrow:\n{4}'.format(
             weather.get_temperature('celsius')['temp'],
-            weather.get_detailed_status(),
             weather.get_wind()['speed'],
-            forecast[0].get_detailed_status(),
-            forecast[1].get_detailed_status()
+            weather.get_detailed_status().capitalize(),
+            forecast[0].get_detailed_status().capitalize(),
+            forecast[1].get_detailed_status().capitalize()
         )
     except OSError:
         w.labelWeather['text'] = 'A network error\noccurred!'

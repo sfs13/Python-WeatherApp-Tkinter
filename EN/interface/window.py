@@ -6,7 +6,7 @@ from WeatherApp import showWeather
 
 
 root = Tk()
-root.geometry('310x250')
+root.geometry('310x300')
 root.resizable(
     'False',
     'False'
