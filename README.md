@@ -28,6 +28,9 @@ pip install pyowm
 - 1.0.0
   - First release
 
+- 1.0.1
+  - Changed the window size and information display
+
 ### Author
 
 - Daniel 'sfs13' - <a href="https://github.com/sfs13">GitHub</a>
@@ -62,6 +65,9 @@ pip install pyowm
 
 - 1.0.0
   - Первый релиз
+
+- 1.0.1
+  - Изменен размер окна и отображение информации
 
 ### Автор
 
